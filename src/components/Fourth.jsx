@@ -51,7 +51,7 @@ function Fourth() {
         )}
 
         {!showBackground && (
-          <video autoPlay controls className="md:w-full w-[300px] h-full object-cover z-30" onEnded={() => setShowBackground(true)} >
+          <video autoPlay controls className="md:w-full w-full h-full object-cover z-30" onEnded={() => setShowBackground(true)} >
             <source src={video} type="video/mp4" />
           </video>
         )}
