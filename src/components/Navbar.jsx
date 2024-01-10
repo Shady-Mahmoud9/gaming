@@ -1,52 +1,51 @@
-import React from 'react'
-import brand from '../images/brand.png'
-import bg from '../images/bg.png'
-import video from '../images/video.png'
+import React, { useState } from 'react';
+import brand from '../images/brand.png';
+import video from '../images/video.png';
+import bg from '../images/bg.png';
 
 
+const Navbar = () => {
+  const [isNavMenuHidden, setNavMenuHidden] = useState(true);
 
-function Navbar() {
+  const toggleNavMenu = () => {
+    setNavMenuHidden(!isNavMenuHidden);
+  };
+
   return (
-    
-    <div style={{background: `url(${bg})`,backgroundRepeat:"no-repeat" , backgroundSize:"cover" ,height:"100vh"}} className=" w-full h-full bg-no-repeat bg-cover" >
-
-
-        <nav className="w-full gap-10 p-2 flex items-center justify-center">
-  <div className="container mx-auto flex items-end justify-between">
-    <div className="flex items-center">
-      <img src={brand} alt='' className='w-[60px]' ></img>
-      <a href="#!" className="text-white text-2xl md:text-3xl ">Shady</a>
-    </div>
-    {/* Responsive Navigation Toggle */}
-    <div className="md:hidden">
-      <button id="navToggle" className="text-white text-xl">
-        <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </div>
-  </div>
-  {/* Responsive Navigation Menu */}
-  <div id="navMenu" className="md:hidden hidden">
-    <a href="#!" className="block p-2 text-white text-xl  font-bold">Home</a>
-    <a href="#!" className="block p-2 text-white text-xl font-bold">About</a>
-    <a href="#!" className="block p-2 text-white text-xl font-bold">Menu </a>
-    <a href="#!" className="block p-2 text-white text-xl font-bold">Services</a>
-    <a href="https://shady-mahmoud.vercel.app/" className="block p-2 text-white text-xl font-bold">Contact</a>
-   
-  </div>
-  {/* Navigation Links (visible on larger screens) */}
-  <div className="hidden md:flex  lg:gap-16 gap-10 md:gap-8 ">
-    <a href="#!" className="hover:text-yellow-400 text-white text-xl  font-bold ">Home</a>
-    <a href="#!" className="hover:text-yellow-400 text-white text-xl  font-bold">About</a>
-    <a href="#!" className="hover:text-yellow-400 text-white text-xl font-bold ">Menu </a>
-    <a href="#!" className="hover:text-yellow-400 text-white text-xl  font-bold">Services</a>
-    <a href="https://shady-mahmoud.vercel.app/" className="hover:text-yellow-400 text-white text-xl  font-bold">Contact</a>
-    
-  </div>
-  <button className='flex items-center justify-center bg-yellow-400 hover:bg-yellow-200 w-1/2 md:w-1/3 h-[40px] p-5 text-center rounded-md font-semibold'>Contact US</button>
-</nav>
-
+    <div className='w-full' style={{ background: `url(${bg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+    <nav className="w-full gap-10 p-2 flex items-center justify-center">
+      <div className="container mx-auto flex items-end justify-between">
+        <div className="flex items-center">
+          <img src={brand} alt='' className='w-[60px]' />
+          <a href="#!" className="text-white text-2xl md:text-3xl ">Shady</a>
+        </div>
+        {/* Responsive Navigation Toggle */}
+        <div className="md:hidden">
+          <button id="navToggle" className="text-white text-xl" onClick={toggleNavMenu}>
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      {/* Responsive Navigation Menu */}
+      <div id="navMenu" className={`md:hidden ${isNavMenuHidden ? 'hidden' : ''}`}>
+        <a href="#!" className="block p-2 text-white text-xl font-bold">Home</a>
+        <a href="#!" className="block p-2 text-white text-xl font-bold">About</a>
+        <a href="#!" className="block p-2 text-white text-xl font-bold">Menu </a>
+        <a href="#!" className="block p-2 text-white text-xl font-bold">Services</a>
+        <a href="https://shady-mahmoud.vercel.app/" className="block p-2 text-white text-xl font-bold">Contact</a>
+      </div>
+      {/* Navigation Links (visible on larger screens) */}
+      <div className="hidden md:flex  lg:gap-16 gap-10 md:gap-8 ">
+        <a href="#!" className="hover:text-yellow-400 text-white text-xl font-bold ">Home</a>
+        <a href="#!" className="hover:text-yellow-400 text-white text-xl font-bold">About</a>
+        <a href="#!" className="hover:text-yellow-400 text-white text-xl font-bold ">Menu </a>
+        <a href="#!" className="hover:text-yellow-400 text-white text-xl font-bold">Services</a>
+        <a href="https://shady-mahmoud.vercel.app/" className="hover:text-yellow-400 text-white text-xl font-bold">Contact</a>
+      </div>
+      <button className='flex items-center justify-center bg-yellow-400 hover:bg-yellow-200 w-1/2 md:w-1/3 h-[40px] p-5 text-center rounded-md font-semibold'>Contact US</button>
+    </nav>
 
 <div className="flex w-full flex-col md:flex-row justify-start md:mt-3 mt-10 p-10 md:Pt-32 md:pb-52 md:px-32 h-full  items-center  ">
   <div  className="flex flex-col gap-5 cursor-pointer">
@@ -67,7 +66,7 @@ function Navbar() {
 
 
     </div>
-  )
-}
 
+);
+};
 export default Navbar
