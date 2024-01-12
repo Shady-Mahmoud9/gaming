@@ -44,7 +44,7 @@ const Navbar = () => {
         <a href="#!" className="hover:text-yellow-400 text-white text-xl font-bold">Services</a>
         <a href="https://shady-mahmoud.vercel.app/" className="hover:text-yellow-400 text-white text-xl font-bold">Contact</a>
       </div>
-      <button className='flex items-center justify-center bg-yellow-400 hover:bg-yellow-200 w-1/2 md:w-1/3 h-[40px] p-5 text-center rounded-md font-semibold'>Contact US</button>
+      <a href="https://shady-mahmoud.vercel.app/"><button className='flex items-center justify-center bg-yellow-400 hover:bg-yellow-200 w-1/2 md:w-1/3 h-[40px] p-5 text-center rounded-md font-semibold'>Contact US</button></a>
     </nav>
 
 <div className="flex w-full flex-col md:flex-row justify-start md:mt-3 mt-10 p-10 md:Pt-32 md:pb-52 md:px-32 h-full  items-center  ">
