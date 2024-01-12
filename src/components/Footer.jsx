@@ -1,8 +1,17 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import brand from '../images/brand.png'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Footer() {
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          easing: 'ease-in-out'
+        });
+      }, []);
+
   return (
     <div>
       

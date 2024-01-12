@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import brand from '../images/brand.png';
 import video from '../images/video.png';
 import bg from '../images/bg.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Navbar = () => {
@@ -10,6 +12,14 @@ const Navbar = () => {
   const toggleNavMenu = () => {
     setNavMenuHidden(!isNavMenuHidden);
   };
+
+  useEffect(() => {
+    AOS.init({
+       
+      easing: 'ease-in-out'
+    });
+  }, []);
+  
 
   return (
     <div className='w-full' style={{ background: `url(${bg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
@@ -44,11 +54,11 @@ const Navbar = () => {
         <a href="#!" className="hover:text-yellow-400 text-white text-xl font-bold">Services</a>
         <a href="https://shady-mahmoud.vercel.app/" className="hover:text-yellow-400 text-white text-xl font-bold">Contact</a>
       </div>
-      <a href="https://shady-mahmoud.vercel.app/"><button className='flex items-center justify-center bg-yellow-400 hover:bg-yellow-200 w-1/2 md:w-1/3 h-[40px] p-5 text-center rounded-md font-semibold'>Contact US</button></a>
+      <a href="https://shady-mahmoud.vercel.app/ " className='flex items-center justify-center bg-yellow-400 hover:bg-yellow-200 w-1/2 md:w-1/3 h-[40px] p-5 text-center rounded-md font-semibold'>Contact US</a>
     </nav>
 
 <div className="flex w-full flex-col md:flex-row justify-start md:mt-3 mt-10 p-10 md:Pt-32 md:pb-52 md:px-32 h-full  items-center  ">
-  <div  className="flex flex-col gap-5 cursor-pointer">
+  <div data-aos="zoom-in" data-aos-duration="1400" className="flex flex-col gap-5 cursor-pointer">
     
     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white">Stay Connected  <br /> To The World OF <br /> Metaverse</h1>
     <h1 className=' text-white'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br /> Iusto aspernatur laboriosam fugiat consequuntur delectus est.</h1>

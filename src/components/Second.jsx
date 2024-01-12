@@ -1,11 +1,22 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import pes from '../images/pes2023.jpg'
 import pubg from '../images/pubg.jpg'
 import cod from '../images/cod.jpg'
 import vr from '../images/vr.jpg'
 import vr2 from '../images/mmm.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Second() {
+
+
+  useEffect(() => {
+    AOS.init({
+       
+      easing: 'ease-in-out'
+    });
+  }, []);
+
 
   const games = [{
    "image":pes,
@@ -35,13 +46,13 @@ function Second() {
 
   return (
     <div  className='bg-gradient-to-bl from-pink-950 via-indigo-950 to-indigo-950 p-5 md:p-16'>
-        <div className='text-white text-center flex flex-col gap-5 mt-20'>
+        <div  className='text-white text-center flex flex-col gap-5 mt-20'>
             <h1 className='text-5xl font-semibold'>Latest Awesome Games Of 2023</h1>
             <h1 className='text-sm font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat voluptatibus est dolores eaque dolor quaerat illo  possimus labore quibusdam, facere ea <br /> totam amet soluta. Lorem ipsum dolor sit amet consectetur. Ipsam delectus repudiandae ipsum saepe!</h1>
         </div>
     
 
-        <div className='w-full flex  gap-10 justify-center items-center flex-col md:flex-col lg:flex-row '>
+        <div data-aos="zoom-in" data-aos-duration="1400" className='w-full flex  gap-10 justify-center items-center flex-col md:flex-col lg:flex-row '>
       
 
       {games.map((game)=>( <div className='bg-blue-900 cursor-default gap-7 rounded-lg w-full md:w-2/3 lg:w-1/4 h-full flex flex-col mt-32'>
@@ -65,7 +76,7 @@ function Second() {
       
       <div className='mt-20 flex w-full flex-col md:flex-row justify-between p-5 md:p-10 h-full gap-10 items-center '>
       
-       <div  className="flex md:w-[45%] w-full  flex-col gap-10 cursor-pointer">
+       <div data-aos="fade-right" data-aos-duration="1400" className="flex md:w-[45%] w-full  flex-col gap-10 cursor-pointer">
     
           <h1 className="text-3xl text-center md:text-start md:text-6xl font-semibold text-white">We Are The Best <br />Company</h1>
           <h2 className='text-sm text-center md:text-start text-white'>Lorem, ipsum Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit. Praesentium, blanditiis. dolor sit amet  <br /> consectetur  laboriosam fugiat consequuntur delectus est.</h2>
@@ -77,7 +88,7 @@ function Second() {
     
       </div>
 
-      <div style={{background: `url(${vr})`,backgroundRepeat:"no-repeat" , backgroundSize:"cover" }} className="rounded-xl md:w-[45%] w-[90%]   cursor-pointer">
+      <div data-aos="fade-down" data-aos-duration="1400" style={{background: `url(${vr})`,backgroundRepeat:"no-repeat" , backgroundSize:"cover" }} className="rounded-xl md:w-[45%] w-[90%]   cursor-pointer">
         <img src={vr2} className='w-full rounded-xl md:mt-10 mt-4 -ml-4 md:-ml-10 ' alt="" />
       </div>
 

@@ -1,24 +1,32 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import manvr from '../images/man vr.jpg'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function First() {
+
+  useEffect(() => {
+    AOS.init({
+     
+      easing: 'ease-in-out'
+    });
+  }, []);
   return (
     <div className='bg-gradient-to-tl from-pink-950 via-indigo-950 to-indigo-950'>
-      <div className='w-full flex gap-10 justify-center items-center flex-col md:flex-row '>
-      <div className='bg-blue-800 p-6 gap-3 items-center md:items-start rounded-lg w-4/5 md:w-1/4 h-full flex flex-col mt-10 md:-mt-28'>
+      <div data-aos="fade-up" data-aos-duration="1400" className='w-full flex gap-10 justify-center items-center flex-col md:flex-row '>
+      <div  className='bg-blue-800 p-6 gap-3 items-center md:items-start rounded-lg w-4/5 md:w-1/4 h-full flex flex-col mt-10 md:-mt-28'>
       <i className="text-5xl text-white  fa-solid fa-circle-nodes"></i>
       <h1 className='text-2xl md:text-3xl text-white'>Connectivity</h1>
       <h1 className='text-base text-white text-center md:text-start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium rerum dolorem incidunt quae repellat inventore?</h1>
       </div>
 
-      <div className='bg-pink-600 p-6 gap-3 items-center md:items-start rounded-lg w-4/5 md:w-1/4 h-full flex flex-col mt-10 md:-mt-28'>
+      <div  className='bg-pink-600 p-6 gap-3 items-center md:items-start rounded-lg w-4/5 md:w-1/4 h-full flex flex-col mt-10 md:-mt-28'>
       <i className="text-5xl text-white  fa-solid fa-lock"></i>
       <h1 className='text-2xl md:text-3xl text-white'>Security</h1>
       <h1 className='text-base text-white text-center md:text-start'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium rerum dolorem incidunt quae repellat inventore?</h1>
       </div>
 
-      <div className='bg-yellow-400 p-6 gap-3 items-center md:items-start rounded-lg w-4/5 md:w-1/4 h-full flex flex-col mt-10 md:-mt-28'>
+      <div  className='bg-yellow-400 p-6 gap-3 items-center md:items-start rounded-lg w-4/5 md:w-1/4 h-full flex flex-col mt-10 md:-mt-28'>
       <i className="text-5xl text-black  fa-solid fa-vr-cardboard"></i>
       
       <h1 className='text-2xl md:text-3xl text-black'>Use VR</h1>
@@ -28,11 +36,11 @@ function First() {
 
 
       <div className='mt-32 flex flex-col w-full md:flex-col lg:flex-row justify-center items-center gap-10 md:gap-32 p-10'>
-        <div className= 'w-full md:w-full lg:w-1/2'>
+        <div data-aos="fade-right" data-aos-duration="1400" className= 'w-full md:w-full lg:w-1/2'>
           <img src={manvr} className='w-full rounded-xl' alt="" />
         </div>
 
-        <div className='w-full md:w-full '>
+        <div data-aos="fade-up" data-aos-duration="1400" className='w-full md:w-full '>
           <h1 className='text-4xl text-center md:text-center lg:text-start font-semibold text-white'>The Opportunity ofour VR  <br />That we offer So Far</h1>
           <div className='flex flex-col items-center mt-20 md:mt-5 gap-16 md:gap-16'>
             

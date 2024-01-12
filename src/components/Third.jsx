@@ -1,9 +1,19 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import man1 from '../images/man vr1.jpg'
 import man3 from '../images/man vr3.jpg'
 import man2 from '../images/man vr2.jpg'
 import man4 from '../images/man vr4.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function Third() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out'
+    });
+  }, []);
+  
   return (
     <div className='  '>
         <div className='pt-32  bg-indigo-950 text-white font-semibold text-center flex flex-col gap-10'>
@@ -11,8 +21,8 @@ function Third() {
           <h1 className='text-sm md:text-lg '>Lorem, ipsum dolor  adipisicing elit. Nostrum nihil, iusto cumque nam cum placeat <br /> nobis earum excepturi. Molestiae necessitatibus consectetur ut ratione quibusdam culpa velit nemo atque veniam. Neque!</h1>
         </div>
        
-        <div className='bg-gradient-to-tl from-pink-950 via-indigo-950 to-indigo-950 flex flex-col gap-20 items-center justify-center md:flex-col lg:flex-row pt-40 p-5'>
-          <div className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col '>
+        <div  className='bg-gradient-to-tl from-pink-950 via-indigo-950 to-indigo-950 flex flex-col gap-20 items-center justify-center md:flex-col lg:flex-row pt-40 p-5'>
+          <div data-aos="fade-up" data-aos-duration="1400" className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col '>
           <img src={man1} className='rounded-lg h-[350px] hover:opacity-80 cursor-pointer' alt="" />
           <div className='flex flex-col md:flex-row justify-between p-5 items-start md:items-center'>
             <div className='flex flex-col gap-5'>
@@ -37,7 +47,7 @@ function Third() {
       
       </div>
 
-      <div className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col mt-32'>
+      <div data-aos="fade-up" data-aos-duration="1400" className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col mt-32'>
       <img src={man3} className='rounded-lg h-[350px] hover:opacity-80 cursor-pointer' alt=""  />
       <div className='flex flex-col md:flex-row justify-between p-5 items-start md:items-center'>
             <div className='flex flex-col gap-5'>
@@ -64,7 +74,7 @@ function Third() {
 
 
         <div className='bg-gradient-to-bl from-pink-950 via-indigo-950 to-indigo-950 flex flex-col gap-20 justify-center items-center  md:flex-col lg:flex-row pt-40 lg:-mt-32 p-5'>
-          <div className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col '>
+          <div data-aos="fade-up" data-aos-duration="1400" className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col '>
           <img src={man2} className='rounded-lg h-[350px] hover:opacity-80 cursor-pointer' alt="" />
           <div className='flex flex-col md:flex-row justify-between p-5 items-start md:items-center'>
             <div className='flex flex-col gap-5'>
@@ -89,7 +99,7 @@ function Third() {
       
       </div>
 
-      <div className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col mt-32'>
+      <div data-aos="fade-up" data-aos-duration="1400" className='bg-white  gap-7 rounded-lg w-full md:w-2/3 lg:w-[35%] h-full flex flex-col mt-32'>
       <img src={man4} className='rounded-lg h-[350px] hover:opacity-80 cursor-pointer' alt=""  />
       <div className='flex flex-col md:flex-row justify-between p-5 items-start md:items-center'>
             <div className='flex flex-col gap-5'>
