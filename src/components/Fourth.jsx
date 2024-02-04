@@ -9,7 +9,7 @@ function Fourth() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
+      
       easing: 'ease-in-out'
     });
   }, []);
@@ -56,7 +56,7 @@ function Fourth() {
 
         {showPlayIcon && (
           <div  onClick={handlePlayClick} className="absolute top-[60%] md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-white text-6xl z-20" >
-            <img src={videoicon} className='w-[50px] md:w-[90px] hover:opacity-70 border rounded-full bg-white' alt="" />
+            <img src={videoicon} className='w-[35px] md:w-[90px] hover:opacity-70 border rounded-full bg-white' alt="" />
           </div>
         )}
 
@@ -68,7 +68,7 @@ function Fourth() {
       </div>
 
       <div className='bg-gradient-to-tl from-pink-950 via-indigo-950 to-indigo-950 flex w-full flex-col md:flex-col lg:flex-row justify-between md:pt-32 p-5 md:pl-40 md:pr-40 h-full gap-10 items-center'>
-        <div data-aos="zoom-in" data-aos-duration="1400" className="flex items-center md:full lg:w-[45%]  w-full flex-col gap-10 cursor-pointer">
+        <div data-aos="zoom-in" data-aos-duration="1400" className="flex items-start md:full lg:w-[45%]  w-full flex-col gap-10 cursor-pointer">
           <h1 className="text-3xl md:text-5xl text-center md:text-center lg:text-start lg:text-6xl font-semibold text-white">Frequently Asked <br />Questions</h1>
           <h2 className='text-sm text-center md:text-center lg:text-start text-white'>Lorem, ipsum Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit. Praesentium, blanditiis. dolor sit amet  .</h2>
           <button className='bg-yellow-400 text-sm md:text-lg hover:bg-yellow-200 w-full md:w-1/3 h-[50px] rounded-md font-semibold'>Add More</button>

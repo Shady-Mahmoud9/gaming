@@ -41,16 +41,16 @@ function First() {
         </div>
 
         <div data-aos="fade-up" data-aos-duration="1400" className='w-full md:w-full '>
-          <h1 className='text-4xl text-center md:text-center lg:text-start font-semibold text-white'>The Opportunity ofour VR  <br />That we offer So Far</h1>
+          <h1 className='text-2xl md:text-4xl text-center md:text-center lg:text-start font-semibold text-white'>The Opportunity ofour VR  <br />That we offer So Far</h1>
           <div className='flex flex-col items-center mt-20 md:mt-5 gap-16 md:gap-16'>
             
             <div className='flex flex-col w-full md:w-2/3 md:flex-col lg:flex-row gap-7 items-center'>
               <div className='flex p-4 items-center bg-blue-800 rounded-full'>
                 <i className="text-4xl text-white  fa-solid fa-vr-cardboard"></i>
               </div>
-              <div className='w-full  text-center md:gap-10 lg:gap-2 gap-10 flex flex-col md:text-center lg:text-start md:w-2/3 text-white'>
-                <h1 className='text-5xl '>virtual reality</h1>
-                <h1 className='text-2xl'>Lorem, ipsum dolor sit amet consectetur  adipisicing elit. Amet, pariatur?</h1>
+              <div className='w-full  text-center md:gap-10 lg:gap-2 gap-10 flex flex-col md:text-center lg:text-start md:w-full text-white'>
+                <h1 className='text-3xl md:text-5xl '>virtual reality</h1>
+                <h1 className='text-lg md:text-2xl'>Lorem, ipsum dolor sit amet consectetur  adipisicing elit. Amet, pariatur?</h1>
               </div>
             </div>
 
@@ -58,9 +58,9 @@ function First() {
               <div className='flex p-4 items-center bg-pink-600 rounded-full'>
                 <i className="text-4xl text-white  fa-solid fa-microchip"></i>
               </div>
-              <div className='w-full  text-center md:gap-10 lg:gap-2 gap-10 flex flex-col md:text-center lg:text-start md:w-2/3 text-white'>
-                <h1 className='text-5xl '>Augemented reality</h1>
-                <h1 className='text-2xl'>Lorem, ipsum dolor sit amet consectetur  adipisicing elit. Amet, pariatur?</h1>
+              <div className='w-full  text-center md:gap-10 lg:gap-2 gap-10 flex flex-col md:text-center lg:text-start md:w-full text-white'>
+                <h1 className='text-3xl md:text-5xl '>Augemented reality</h1>
+                <h1 className='text-lg md:text-2xl'>Lorem, ipsum dolor sit amet consectetur  adipisicing elit. Amet, pariatur?</h1>
              
               </div>
             </div>
@@ -69,9 +69,9 @@ function First() {
               <div className='flex p-4 items-center bg-yellow-400 rounded-full'>
                 <i className="text-4xl text-black  fa-solid fa-hands-holding"></i>
               </div>
-              <div className='w-full  text-center md:gap-10 lg:gap-2 gap-10 flex flex-col md:text-center lg:text-start md:w-2/3 text-white'>
-                <h1 className='text-5xl '>Best Experience </h1>
-                <h1 className='text-2xl'>Lorem, ipsum dolor sit amet consectetur  adipisicing elit. Amet, pariatur?</h1>
+              <div className='w-full  text-center md:gap-10 lg:gap-2 gap-10 flex flex-col md:text-center lg:text-start md:w-full text-white'>
+                <h1 className='text-3xl md:text-5xl '>Best Experience </h1>
+                <h1 className='text-lg md:text-2xl'>Lorem, ipsum dolor sit amet consectetur  adipisicing elit. Amet, pariatur?</h1>
              
               </div>
             </div>

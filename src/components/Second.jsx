@@ -47,18 +47,18 @@ function Second() {
   return (
     <div  className='bg-gradient-to-bl from-pink-950 via-indigo-950 to-indigo-950 p-5 md:p-16'>
         <div  className='text-white text-center flex flex-col gap-5 mt-20'>
-            <h1 className='text-5xl font-semibold'>Latest Awesome Games Of 2023</h1>
-            <h1 className='text-sm font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat voluptatibus est dolores eaque dolor quaerat illo  possimus labore quibusdam, facere ea <br /> totam amet soluta. Lorem ipsum dolor sit amet consectetur. Ipsam delectus repudiandae ipsum saepe!</h1>
+            <h1 className='text-2xl md:text-5xl font-semibold'>Latest Awesome Games Of 2023</h1>
+            <h1 className= 'text-xs md:text-sm font-semibold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat voluptatibus est dolores eaque dolor quaerat illo  possimus labore quibusdam, facere ea <br /> totam amet soluta. Lorem ipsum dolor sit amet consectetur. Ipsam delectus repudiandae ipsum saepe!</h1>
         </div>
     
 
         <div data-aos="zoom-in" data-aos-duration="1400" className='w-full flex  gap-10 justify-center items-center flex-col md:flex-col lg:flex-row '>
       
 
-      {games.map((game)=>( <div className='bg-blue-900 cursor-default gap-7 rounded-lg w-full md:w-2/3 lg:w-1/4 h-full flex flex-col mt-32'>
-      <img src={game.image} className='rounded-lg h-[330px] hover:opacity-70 cursor-pointer' alt="" />
-      <h1 className='text-4xl text-white px-5 font-bold'>{game.title}</h1>
-      <h1 className='text-base text-white px-5'>{game.description}</h1>
+      {games.map((game)=>( <div className='bg-blue-900 cursor-default gap-3 md:gap-7 rounded-lg w-full md:w-2/3 lg:w-1/4 h-full flex flex-col mt-32'>
+      <img src={game.image} className='rounded-lg h-[200px] md:h-[330px] hover:opacity-70 cursor-pointer' alt="" />
+      <h1 className='text-2xl md:text-4xl text-white px-5 font-bold'>{game.title}</h1>
+      <h1 className='text-sm md:text-base text-white px-5'>{game.description}</h1>
       <div className='flex justify-between p-5 cursor-default'>
         <div >
           <h3 className='text-sm text-gray-500 font-semibold line-through'>{game.price}</h3>
@@ -74,12 +74,12 @@ function Second() {
       </div>
    
       
-      <div className='mt-20 flex w-full flex-col md:flex-row justify-between p-5 md:p-10 h-full gap-10 items-center '>
+      <div className='mt-20 flex w-full flex-col md:flex-row justify-between  md:p-10 h-full gap-10 items-center '>
       
-       <div data-aos="fade-right" data-aos-duration="1400" className="flex md:w-[45%] w-full  flex-col gap-10 cursor-pointer">
+       <div data-aos="fade-right" data-aos-duration="1400" className="flex  md:w-[45%] w-full  flex-col gap-10 cursor-pointer">
     
           <h1 className="text-3xl text-center md:text-start md:text-6xl font-semibold text-white">We Are The Best <br />Company</h1>
-          <h2 className='text-sm text-center md:text-start text-white'>Lorem, ipsum Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit. Praesentium, blanditiis. dolor sit amet  <br /> consectetur  laboriosam fugiat consequuntur delectus est.</h2>
+          <h2 className='text-sm text-center md:text-start text-white '>Lorem, ipsum Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit. Praesentium, blanditiis. dolor sit amet  <br /> consectetur  laboriosam fugiat consequuntur delectus est.</h2>
     
           <button className='bg-yellow-400  text-sm  md:text-lg  hover:bg-yellow-200 w-full  md:w-1/3 h-[50px] rounded-md font-semibold'>Buy Now</button>
 
@@ -88,7 +88,7 @@ function Second() {
     
       </div>
 
-      <div data-aos="fade-down" data-aos-duration="1400" style={{background: `url(${vr})`,backgroundRepeat:"no-repeat" , backgroundSize:"cover" }} className="rounded-xl md:w-[45%] w-[90%]   cursor-pointer">
+      <div data-aos="fade-up" data-aos-duration="1400" style={{background: `url(${vr})`,backgroundRepeat:"no-repeat" , backgroundSize:"cover" }} className="rounded-xl md:w-[45%] w-[90%]   cursor-pointer">
         <img src={vr2} className='w-full rounded-xl md:mt-10 mt-4 -ml-4 md:-ml-10 ' alt="" />
       </div>
 
